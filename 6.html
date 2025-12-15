@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .gallery {
+      display: grid;
+      display: block;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      max-width: 1200px;
+      width: 100%;
+    }
+    .gallery img,
+    .gallery iframe{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery">
+    <!-- 8 Images -->
+    <img id="img1" alt="Image 1">
+    <img id="img2" alt="Image 2">
+    <img id="img3" alt="Image 3">
+    <img id="img4" alt="Image 4">
+    <img id="img5" alt="Image 5">
+    <img id="img6" alt="Image 6">
+  </div>
+
+  <script>
+    // Array of image sources
+    const imageSources = [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ];
+
+    // Array of video sources
+	/*
+    const videoSources = [
+      "https://drive.usercontent.google.com/download?id=12QnLjshQ_7RuOU1m81syevG0cA28G2hf&export=download&authuser=1&confirm=t&uuid=a40436a4-78b3-4353-be8b-82a579719b4c&at=AN8xHoqVlTTNUD-2W1t3jXOEIQzL:1758029716869",
+      "video2.mp4"
+    ];
+	*/
+    // Insert image sources
+    imageSources.forEach((src, index) => {
+      const img = document.getElementById(`img${index + 1}`);
+      if (img) img.src = "paperimgs\\" + src;
+    });
+	
+	/*
+    // Insert video sources
+    videoSources.forEach((src, index) => {
+      const video = document.getElementById(`video${index + 1}`);
+      if (video) {
+        const source = document.createElement("source");
+        source.src = src;
+        source.type = "video/mp4";
+        video.appendChild(source);
+      }
+    });
+	*/
+  </script>
+
+</body>
+</html>

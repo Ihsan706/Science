@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <title>المصادر</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    h1 { font-size: 22px; margin-bottom: 20px; }
+    ul { line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <a href="3.html">&#8592; الرجوع</a>
+
+  <h1>المصادر</h1>
+  <ul id="sourcesList"></ul>
+
+  <script>
+    const sources = [
+		"جسيم دون ذري",
+		"كوارك",
+		"عنصر اصطناعي",
+		"مراحل اكتشاف الذرة",
+		"بروتون",
+		"إلكترون",
+		"نيوترون",
+		"ذرة",
+		"الجدول الدوري"
+    ];
+
+    const urls = [
+		"https://ar.wikipedia.org/wiki/%D8%AC%D8%B3%D9%8A%D9%85_%D8%AF%D9%88%D9%86_%D8%B0%D8%B1%D9%8A",
+		"https://ar.wikipedia.org/wiki/%D9%83%D9%88%D8%A7%D8%B1%D9%83",
+		"https://ar.wikipedia.org/wiki/%D8%B9%D9%86%D8%B5%D8%B1_%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+		"https://mawdoo3.com/%D9%85%D8%B1%D8%A7%D8%AD%D9%84_%D8%A7%D9%83%D8%AA%D8%B4%D8%A7%D9%81_%D8%A7%D9%84%D8%B0%D8%B1%D8%A9",
+		"https://ar.wikipedia.org/wiki/%D8%A8%D8%B1%D9%88%D8%AA%D9%88%D9%86",
+		"https://ar.wikipedia.org/wiki/%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86",
+		"https://ar.wikipedia.org/wiki/%D9%86%D9%8A%D9%88%D8%AA%D8%B1%D9%88%D9%86",
+		"https://ar.wikipedia.org/wiki/%D8%B0%D8%B1%D8%A9",
+		"https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%AC%D8%AF%D9%88%D9%84_%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A"
+	  ];
+
+    const list = document.getElementById("sourcesList");
+
+    sources.forEach((text, index) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+
+      a.href = urls[index];
+      a.textContent = text;
+
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  </script>
+
+</body>
+</html>
